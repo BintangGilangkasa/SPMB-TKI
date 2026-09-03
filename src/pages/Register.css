@@ -1,0 +1,329 @@
+  /* =========================
+   REGISTER PAGE
+========================= */
+
+.register-page {
+  width: 100%;
+  min-height: auto;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  font-family: "Inter", Arial, sans-serif;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+  position: absolute;
+
+  top: -42px;
+  left: 0;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #55b9ed;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px
+    rgba(46, 169, 232, 0.2);
+
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #2ca6e5;
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+  width: 100%;
+  max-width: 390px;
+
+  padding: 8px 4px;
+
+  background: transparent;
+
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.register-card h1 {
+  text-align: left;
+
+  color: #17252d;
+
+  font-size: 26px;
+  font-weight: 600;
+
+  margin: 7px 0 8px;
+}
+
+.register-eyebrow {
+  color: #269ddc;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.register-subtitle {
+  margin-bottom: 22px;
+  color: #84919a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.register-card form {
+  width: 100%;
+}
+
+.register-input-group {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.register-input-group input {
+  width: 100%;
+  height: 42px;
+
+  padding:
+    0 42px
+    0 38px;
+
+  border: 1px solid #dfe9ee;
+  outline: none;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #444444;
+
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.register-input-group input::placeholder {
+  color: #9b9b9b;
+}
+
+.register-input-group input:focus {
+  border-color: #55b9ed;
+  box-shadow: 0 0 0 3px rgba(85, 185, 237, 0.12);
+}
+
+
+/* =========================
+   INPUT ICON
+========================= */
+
+.register-input-icon {
+  position: absolute;
+
+  left: 14px;
+
+  z-index: 2;
+
+  color: #858585;
+
+  font-size: 13px;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   PASSWORD BUTTON
+========================= */
+
+.password-button {
+  position: absolute;
+
+  right: 12px;
+
+  width: 26px;
+  height: 26px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.password-button:hover {
+  color: #333333;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.register-error {
+  padding: 8px 10px;
+  margin-bottom: 12px;
+
+  border-radius: 6px;
+
+  background:
+    rgba(255, 255, 255, 0.85);
+
+  color: #d53f3f;
+
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.register-submit {
+  width: 100%;
+  height: 40px;
+
+  margin-top: 3px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #269ddc;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.register-submit:hover {
+  background: #168cc8;
+
+  transform: translateY(-1px);
+}
+
+.register-submit:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.login-text {
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: #7f8b92;
+
+  font-size: 10px;
+}
+
+.login-text a {
+  color: #269ddc;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 500px) {
+  .register-page {
+    padding: 18px 0 0;
+  }
+
+  .register-card {
+    padding: 10px 0;
+
+    border-radius: 13px;
+  }
+
+  .register-card h1 {
+    font-size: 23px;
+  }
+
+  .back-button {
+    top: -34px;
+    left: 0;
+
+    width: 35px;
+    height: 35px;
+  }
+
+  .register-input-group input {
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .register-submit {
+    min-height: 44px;
+  }
+}

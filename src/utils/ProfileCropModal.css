@@ -1,0 +1,208 @@
+.crop-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+
+.crop-modal {
+  width: 100%;
+  max-width: 520px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* HEADER */
+
+.crop-modal-header {
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.crop-modal-header h2 {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 17px;
+}
+
+.crop-modal-header p {
+  margin: 5px 0 0;
+
+  color: #999999;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+.crop-close {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f2f2f2;
+
+  color: #777777;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-close:hover {
+  background: #e8e8e8;
+}
+
+
+/* CROP AREA */
+
+.crop-container {
+  position: relative;
+
+  width: 100%;
+  height: 380px;
+
+  background: #151515;
+}
+
+
+/* CONTROLS */
+
+.crop-controls {
+  padding: 18px 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.crop-controls svg {
+  color: #55b9ed;
+
+  font-size: 14px;
+}
+
+.crop-controls input {
+  width: 100%;
+
+  accent-color: #55b9ed;
+}
+
+.crop-controls span {
+  min-width: 38px;
+
+  color: #777777;
+
+  font-size: 10px;
+
+  text-align: right;
+}
+
+
+/* ACTIONS */
+
+.crop-actions {
+  padding: 0 22px 22px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+.crop-cancel-button,
+.crop-save-button {
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.crop-cancel-button {
+  background: #eeeeee;
+
+  color: #666666;
+}
+
+.crop-save-button {
+  background: #55b9ed;
+
+  color: #ffffff;
+}
+
+.crop-save-button:hover {
+  background: #30a7e4;
+}
+
+.crop-save-button:disabled {
+  opacity: 0.6;
+
+  cursor: wait;
+}
+
+
+@media (max-width: 600px) {
+  .crop-container {
+    height: min(320px, 48vh);
+  }
+
+  .crop-modal {
+    max-width: 95%;
+  }
+
+  .crop-modal-header,
+  .crop-controls,
+  .crop-actions {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .crop-cancel-button,
+  .crop-save-button {
+    min-height: 44px;
+  }
+}

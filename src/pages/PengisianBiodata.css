@@ -1,0 +1,711 @@
+.biodata-page {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.biodata-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 22px;
+}
+
+.biodata-header p {
+  margin: 0 0 5px;
+
+  color: #55b9ed;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.biodata-header h1 {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 26px;
+}
+
+.biodata-header span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #999999;
+
+  font-size: 11px;
+}
+
+
+/* =========================
+   SAVE
+========================= */
+
+.save-temporary-button {
+  border: 1px solid #55b9ed;
+
+  background: #ffffff;
+
+  color: #42aae1;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.save-temporary-button:hover {
+  background: #eff9fe;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.biodata-progress-card {
+  padding: 18px 20px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.05);
+
+  margin-bottom: 20px;
+}
+
+.progress-information {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+
+  font-size: 10px;
+
+  color: #888888;
+}
+
+.progress-information strong {
+  color: #55b9ed;
+}
+
+.biodata-progress-line {
+  width: 100%;
+  height: 7px;
+
+  background: #eeeeee;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.biodata-progress-value {
+  height: 100%;
+
+  background: #55b9ed;
+
+  border-radius: 20px;
+
+  transition: width 0.3s ease;
+}
+
+
+/* =========================
+   STEPS
+========================= */
+
+.biodata-step-navigation {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.biodata-step-item {
+  min-width: 0;
+
+  padding: 12px 6px;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #bbbbbb;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.step-circle {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #eeeeee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+.biodata-step-item span {
+  max-width: 100%;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 9px;
+}
+
+.biodata-step-item.active {
+  color: #55b9ed;
+}
+
+.biodata-step-item.active .step-circle {
+  background: #55b9ed;
+
+  color: #ffffff;
+}
+
+.biodata-step-item.completed {
+  color: #43b878;
+}
+
+.biodata-step-item.completed .step-circle {
+  background: #e4f7ec;
+
+  color: #43b878;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.biodata-form-card {
+  padding: 27px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.form-section-header {
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.form-section-header > svg {
+  width: 38px;
+  height: 38px;
+
+  padding: 10px;
+
+  border-radius: 9px;
+
+  background: #e8f6fd;
+
+  color: #55b9ed;
+}
+
+.form-section-header h2 {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 17px;
+}
+
+.form-section-header p {
+  margin: 5px 0 0;
+
+  color: #999999;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #555555;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.form-group label span {
+  color: #e34b4b;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #e1e5e8;
+
+  outline: none;
+
+  border-radius: 8px;
+
+  padding: 11px 12px;
+
+  background: #ffffff;
+
+  color: #444444;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  transition: 0.2s ease;
+}
+
+.form-group textarea {
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #55b9ed;
+
+  box-shadow:
+    0 0 0 3px rgba(85, 185, 237, 0.12);
+}
+
+
+/* =========================
+   UPLOAD
+========================= */
+
+.biodata-notice {
+  margin-top: 18px;
+  padding: 11px 14px;
+  border: 1px solid #cfead9;
+  border-radius: 8px;
+  background: #edf9f2;
+  color: #38815a;
+  font-size: 10px;
+}
+
+.upload-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.upload-box {
+  min-height: 180px;
+
+  padding: 25px;
+
+  border: 2px dashed #d9e2e7;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upload-box:hover {
+  border-color: #55b9ed;
+
+  background: #f8fcfe;
+}
+
+.upload-box > svg {
+  margin-bottom: 12px;
+
+  color: #55b9ed;
+
+  font-size: 27px;
+}
+
+.upload-box strong {
+  color: #444444;
+
+  font-size: 12px;
+}
+
+.upload-box > span {
+  margin-top: 5px;
+
+  color: #aaaaaa;
+
+  font-size: 9px;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-button {
+  margin-top: 15px;
+
+  padding: 8px 13px;
+
+  border-radius: 6px;
+
+  background: #55b9ed;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.selected-file {
+  max-width: 100%;
+
+  margin: 10px 0 0;
+
+  overflow: hidden;
+
+  color: #42a866;
+
+  font-size: 9px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   CONFIRMATION
+========================= */
+
+.confirmation-card {
+  padding: 20px;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+
+  background: #fafafa;
+}
+
+.confirmation-card h3 {
+  margin: 0 0 20px;
+
+  color: #444444;
+
+  font-size: 14px;
+}
+
+.confirmation-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.confirmation-grid div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.confirmation-grid span {
+  color: #999999;
+
+  font-size: 9px;
+}
+
+.confirmation-grid strong {
+  color: #444444;
+
+  font-size: 11px;
+}
+
+.agreement-box {
+  margin-top: 22px;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  background: #eff9fe;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: #555555;
+
+  font-size: 10px;
+  line-height: 1.6;
+
+  cursor: pointer;
+}
+
+.agreement-box input {
+  margin-top: 3px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.biodata-error {
+  margin-top: 22px;
+
+  padding: 11px 13px;
+
+  border-radius: 7px;
+
+  background: #fff0f0;
+
+  color: #d94c4c;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.form-navigation {
+  margin-top: 30px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #eeeeee;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.previous-button,
+.next-button,
+.finish-button {
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 11px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.previous-button {
+  background: #eeeeee;
+
+  color: #666666;
+}
+
+.previous-button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.next-button,
+.finish-button {
+  background: #55b9ed;
+
+  color: #ffffff;
+}
+
+.next-button:hover,
+.finish-button:hover {
+  background: #2fa7e3;
+
+  transform: translateY(-1px);
+}
+
+.finish-button {
+  background: #43b878;
+}
+
+.finish-button:hover {
+  background: #369d65;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .biodata-step-navigation {
+    grid-template-columns:
+      repeat(4, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+  .biodata-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .form-grid,
+  .upload-grid,
+  .confirmation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  .biodata-step-navigation {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    padding-bottom: 8px;
+  }
+
+  .biodata-step-item {
+    min-width: 135px;
+    scroll-snap-align: start;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .biodata-form-card {
+    padding: 20px 15px;
+  }
+
+  .biodata-header h1 {
+    font-size: 22px;
+  }
+
+  .form-navigation {
+    gap: 10px;
+  }
+
+  .previous-button,
+  .next-button,
+  .finish-button {
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  .biodata-header .save-temporary-button {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
